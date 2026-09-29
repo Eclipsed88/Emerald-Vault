@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerald Vault | Game Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="home-page">
+
+<header class="site-header">
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-gem">◆</span>
+            <span>EMERALD VAULT</span>
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="index.html" class="nav-link active">Home</a>
+
+            <div class="nav-dropdown">
+                <button class="nav-drop-button">Games ▾</button>
+
+                <div class="dropdown-menu">
+                    <a href="minecraft.html">Minecraft</a>
+                    <a href="dragon-city.html">Dragon City</a>
+                    <a href="roblox.html">Roblox</a>
+                    <a href="fortnite.html">Fortnite</a>
+                    <a href="guild-wars-2.html">Guild Wars 2</a>
+                </div>
+            </div>
+
+            <div class="nav-dropdown">
+                <button class="nav-drop-button">Rankings ▾</button>
+
+                <div class="dropdown-menu">
+                    <a href="#games" onclick="sortGames('popularity'); return true;">By Popularity</a>
+                    <a href="#games" onclick="sortGames('price'); return true;">By Price</a>
+                    <a href="#games" onclick="sortGames('alphabetical'); return true;">Alphabetical</a>
+                </div>
+            </div>
+
+            <div class="nav-dropdown">
+                <button class="nav-drop-button">Filter ▾</button>
+
+                <div class="dropdown-menu">
+                    <a href="#games" onclick="filterGames('all'); return true;">All Games</a>
+                    <a href="#games" onclick="filterGames('free'); return true;">Free Games</a>
+                    <a href="#games" onclick="filterGames('paid'); return true;">Paid Games</a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <section class="home-hero">
+
+        <div class="hero-decoration hero-decoration-one"></div>
+        <div class="hero-decoration hero-decoration-two"></div>
+
+        <div class="home-hero-content">
+
+            <div class="vault-symbol">◆</div>
+
+            <p class="hero-kicker">THE ULTIMATE GAME COLLECTION</p>
+
+            <h1>
+                WELCOME TO THE
+                <span>EMERALD VAULT</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover, compare and explore a collection of legendary games
+                gathered together in one emerald-powered vault.
+            </p>
+
+            <a href="#games" class="hero-button">
+                EXPLORE THE VAULT
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="section-heading" id="games">
+
+        <div>
+            <p class="section-kicker">THE COLLECTION</p>
+            <h2>Featured Games</h2>
+        </div>
+
+        <div class="controls">
+
+            <label for="sortSelect">SORT</label>
+
+            <select id="sortSelect" onchange="sortGames(this.value)">
+                <option value="popularity">Popularity</option>
+                <option value="price">Price</option>
+                <option value="alphabetical">Alphabetical</option>
+            </select>
+
+            <label for="filterSelect">FILTER</label>
+
+            <select id="filterSelect" onchange="filterGames(this.value)">
+                <option value="all">All Games</option>
+                <option value="free">Free</option>
+                <option value="paid">Paid</option>
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <section class="game-grid" id="gameGrid">
+
+
+        <!-- MINECRAFT -->
+
+        <article
+            class="game-card minecraft-card"
+            data-rank="1"
+            data-price="paid"
+            data-price-value="1"
+            data-name="Minecraft"
+        >
+
+            <div class="game-card-number">01</div>
+
+            <div class="card-icon minecraft-icon">◆</div>
+
+            <div class="card-content">
+
+                <span class="card-category">SANDBOX</span>
+
+                <h3>Minecraft</h3>
+
+                <p>
+                    Build, explore and survive in an endlessly generated
+                    world where your imagination is the only limit.
+                </p>
+
+                <div class="card-bottom">
+
+                    <span class="price-tag paid-tag">PAID</span>
+
+                    <a href="minecraft.html" class="card-button">
+                        VIEW GAME
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+       <!-- DRAGON CITY -->
+
+<article
+    class="game-card dragon-card"
+    data-rank="2"
+    data-price="free"
+    data-price-value="0"
+    data-name="Dragon City"
+>
+
+    <div class="game-card-number">02</div>
+
+    <div class="card-icon dragon-icon">♢</div>
+
+    <div class="card-content">
+
+        <span class="card-category">SIMULATION</span>
+
+        <h3>Dragon City</h3>
+
+        <p>
+            Build your own dragon paradise, collect powerful dragons
+            and create an incredible floating city.
+        </p>
+
+        <div class="card-bottom">
+
+            <span class="price-tag free-tag">FREE</span>
+
+            <a href="dragon-city.html" class="card-button">
+                VIEW GAME
+            </a>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+<!-- ROBLOX -->
+
+<article
+    class="game-card roblox-card"
+    data-rank="3"
+    data-price="free"
+    data-price-value="0"
+    data-name="Roblox"
+>
+
+    <div class="game-card-number">03</div>
+
+    <div class="card-icon roblox-icon">■</div>
+
+    <div class="card-content">
+
+        <span class="card-category">PLATFORM</span>
+
+        <h3>Roblox</h3>
+
+        <p>
+            Enter a massive universe of user-created experiences,
+            adventures, games and endless possibilities.
+        </p>
+
+        <div class="card-bottom">
+
+            <span class="price-tag free-tag">FREE</span>
+
+            <a href="roblox.html" class="card-button">
+                VIEW GAME
+            </a>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+        <!-- FORTNITE -->
+
+        <article
+            class="game-card fortnite-card"
+            data-rank="4"
+            data-price="free"
+            data-price-value="0"
+            data-name="Fortnite"
+        >
+
+            <div class="game-card-number">04</div>
+
+            <div class="card-icon fortnite-icon">▲</div>
+
+            <div class="card-content">
+
+                <span class="card-category">BATTLE ROYALE</span>
+
+                <h3>Fortnite</h3>
+
+                <p>
+                    Battle, build and survive in a constantly evolving
+                    multiplayer universe.
+                </p>
+
+                <div class="card-bottom">
+
+                    <span class="price-tag free-tag">FREE</span>
+
+                    <a href="fortnite.html" class="card-button">
+                        VIEW GAME
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- GUILD WARS 2 -->
+
+        <article
+            class="game-card guild-card"
+            data-rank="5"
+            data-price="free"
+            data-price-value="0"
+            data-name="Guild Wars 2"
+        >
+
+            <div class="game-card-number">05</div>
+
+            <div class="card-icon guild-icon">✦</div>
+
+            <div class="card-content">
+
+                <span class="card-category">MMORPG</span>
+
+                <h3>Guild Wars 2</h3>
+
+                <p>
+                    Explore a huge fantasy world, fight legendary enemies
+                    and experience an ever-changing adventure.
+                </p>
+
+                <div class="card-bottom">
+
+                    <span class="price-tag free-tag">FREE</span>
+
+                    <a href="guild-wars-2.html" class="card-button">
+                        VIEW GAME
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+    <section class="creator-section">
+
+        <div class="creator-symbol">◆</div>
+
+        <div class="creator-content">
+
+            <p class="section-kicker">THE ARCHITECT OF THE VAULT</p>
+
+            <h2>Created by <span>Omkar Ranjan</span></h2>
+
+            <p>
+                Emerald Vault is a personal game discovery project designed
+                to bring different gaming worlds together through one
+                distinctive collection.
+            </p>
+
+        </div>
+
+        <div class="creator-mark">
+            OR
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-brand">
+        <span>◆</span>
+        EMERALD VAULT
+    </div>
+
+    <p>
+        Designed and created by Omkar Ranjan
+    </p>
+
+    <p class="footer-small">
+        © 2026 Emerald Vault. All game names and trademarks belong to
+        their respective owners.
+    </p>
+
+</footer>
+
+
+<script>
+
+function getCards() {
+    return Array.from(document.querySelectorAll(".game-card"));
+}
+
+
+function sortGames(type) {
+
+    const grid = document.getElementById("gameGrid");
+    const cards = getCards();
+
+    if (type === "popularity") {
+
+        cards.sort(function(a, b) {
+            return Number(a.dataset.rank) - Number(b.dataset.rank);
+        });
+
+    } else if (type === "price") {
+
+        cards.sort(function(a, b) {
+            return Number(b.dataset.priceValue) - Number(a.dataset.priceValue);
+        });
+
+    } else if (type === "alphabetical") {
+
+        cards.sort(function(a, b) {
+            return a.dataset.name.localeCompare(b.dataset.name);
+        });
+    }
+
+    cards.forEach(function(card) {
+        grid.appendChild(card);
+    });
+
+    document.getElementById("sortSelect").value = type;
+}
+
+
+function filterGames(type) {
+
+    const cards = getCards();
+
+    cards.forEach(function(card) {
+
+        if (type === "all") {
+            card.style.display = "";
+        }
+
+        else if (type === card.dataset.price) {
+            card.style.display = "";
+        }
+
+        else {
+            card.style.display = "none";
+        }
+
+    });
+
+    document.getElementById("filterSelect").value = type;
+}
+
+
+sortGames("popularity");
+
+</script>
+
+</body>
+</html>
